@@ -84,26 +84,50 @@ class Character(DefaultCharacter):
         if(self.db.lethal > 0):
             self.msg("You heal 1 point of lethal damage.")
             self.db.lethal = self.db.lethal  - 1
-
-        healthbar = "|X|[wHealth:"
-        total = caller.db.lethal + caller.db.bashing
-        if total >= 8:
+            healthbar = "|X|[wHealth:"
+            total = self.db.lethal + self.db.bashing
+            if total >= 8:
                 difference = total - 8
-                caller.db.lethal = caller.db.lethal + difference
-                caller.db.conscious = 0
+                self.db.lethal = self.db.lethal + difference
+                self.db.conscious = 0
 
-        if caller.db.lethal > 8:
-                caller.db.alive = 0
-       
-        for i in range(0,8):
-                if i < caller.db.lethal - 1:
-                        healthbar += " X"
+            if self.db.lethal > 8:
+                self.db.alive = 0
+
+            for i in range(0,8):
+                if i < self.db.lethal - 1:
+                    healthbar += " X"
                 elif i < total:
-                        healthbar += " /"
+                    healthbar += " /"
                 else:
-                        healthbar += " 0"
+                    healthbar += " 0"
         
-        caller.msg(prompt=healthbar)
+            self.msg(prompt=healthbar)
+
+
+    def heal(self, *args, **kwargs):        
+        if(self.db.bashing > 0):
+            self.msg("You heal 1 point of bashing damage.")
+            self.db.bashing = self.db.bashing - 1
+            healthbar = "|X|[wHealth:"
+            total = self.db.lethal + self.db.bashing
+            if total >= 8:
+                difference = total - 8
+                self.db.lethal = self.db.lethal + difference
+                self.db.conscious = 0
+
+            if self.db.lethal > 8:
+                self.db.alive = 0
+
+            for i in range(0,8):
+                if i < self.db.lethal - 1:
+                    healthbar += " X"
+                elif i < total:
+                    healthbar += " /"
+                else:
+                    healthbar += " 0"
+        
+            self.msg(prompt=healthbar)
 
     def get_abilities(self):
         """
@@ -119,25 +143,552 @@ class Character(DefaultCharacter):
 
         super(Character, self).at_post_puppet()
 
-        healthbar = "|X|[wHealth:"
-        total = caller.db.lethal + caller.db.bashing
-        if total >= 8:
-                difference = total - 8
-                caller.db.lethal = caller.db.lethal + difference
-                caller.db.conscious = 0
-
-        if caller.db.lethal > 8:
-                caller.db.alive = 0
-       
-        for i in range(0,8):
-                if i < caller.db.lethal - 1:
-                        healthbar += " X"
-                elif i < total:
-                        healthbar += " /"
-                else:
-                        healthbar += " 0"
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 0)):
+                self.msg(prompt="|X|[wHealth: O O O O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 1)):
+                self.msg(prompt="|X|[wHealth: / O O O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 2)):
+                self.msg(prompt="|X|[wHealth: / / O O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 3)):
+                self.msg(prompt="|X|[wHealth: / / / O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 4)):
+                self.msg(prompt="|X|[wHealth: / / / / O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 5)):
+                self.msg(prompt="|X|[wHealth: / / / / / O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 6)):
+                self.msg(prompt="|X|[wHealth: / / / / / / O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 7)):
+                self.msg(prompt="|X|[wHealth: / / / / / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 8)):
+                self.msg(prompt="|X|[wHealth: X / / / / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 9)):
+                self.msg(prompt="|X|[wHealth: X X / / / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 10)):
+                self.msg(prompt="|X|[wHealth: X X X / / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 11)):
+                self.msg(prompt="|X|[wHealth: X X X X / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 12)):
+                self.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 13)):
+                self.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 0 ) and ( self.db.bashing == 14)):
+                self.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.conscious = 0
+                self.db.alive = 0
+                
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 0)):
+                self.msg(prompt="|X|[wHealth: X O O O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 1)):
+                self.msg(prompt="|X|[wHealth: X / O O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 2)):
+                self.msg(prompt="|X|[wHealth: X / / O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 3)):
+                self.msg(prompt="|X|[wHealth: X / / / O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 4)):
+                self.msg(prompt="|X|[wHealth: X / / / / O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 5)):
+                self.msg(prompt="|X|[wHealth: X / / / / / O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 6)):
+                self.msg(prompt="|X|[wHealth: X / / / / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 7)):
+                self.msg(prompt="|X|[wHealth: X X / / / / /  ")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 8)):
+                self.msg(prompt="|X|[wHealth: X X X / / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 9)):
+                self.msg(prompt="|X|[wHealth: X X X X / / / ")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 10)):
+                self.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 11)):
+                self.msg(prompt="|X|[wHealth: X X X X X X / ")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 1 ) and ( self.db.bashing == 12)):
+                self.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.conscious = 0
+                self.db.alive = 0
+                
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 0)):
+                self.msg(prompt="|X|[wHealth: X X O O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 1)):
+                self.msg(prompt="|X|[wHealth: X X / O O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 2)):
+                self.msg(prompt="|X|[wHealth: X X / / O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 3)):
+                self.msg(prompt="|X|[wHealth: X X / / / O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 4)):
+                self.msg(prompt="|X|[wHealth: X X / / / / O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 5)):
+                self.msg(prompt="|X|[wHealth: X X / / / / / O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 6)):
+                self.msg(prompt="|X|[wHealth: X X / / / / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 7)):
+                self.msg(prompt="|X|[wHealth: X X X / / / /   ")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 8)):
+                self.msg(prompt="|X|[wHealth: X X X X / / / ")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 9)):
+                self.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 10)):
+                self.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 2 ) and ( self.db.bashing == 11)):
+                self.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.conscious = 0
+                self.db.alive = 0
         
-        caller.msg(prompt=healthbar)
+        
+        if((self.db.lethal == 3 ) and ( self.db.bashing == 0)):
+                self.msg(prompt="|X|[wHealth: X X X O O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 3 ) and ( self.db.bashing == 1)):
+                self.msg(prompt="|X|[wHealth: X X X / O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 3 ) and ( self.db.bashing == 2)):
+                self.msg(prompt="|X|[wHealth: X X X / / O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 3 ) and ( self.db.bashing == 3)):
+                self.msg(prompt="|X|[wHealth: X X X / / / O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 3 ) and ( self.db.bashing == 4)):
+                self.msg(prompt="|X|[wHealth: X X X / / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 3 ) and ( self.db.bashing == 5)):
+                self.msg(prompt="|X|[wHealth: X X X X / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 3 ) and ( self.db.bashing == 6)):
+                self.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 3 ) and ( self.db.bashing == 7)):
+                self.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 3 ) and ( self.db.bashing == 8)):
+                self.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.conscious = 0
+                self.db.alive = 0
+
+
+        if((self.db.lethal == 4 ) and ( self.db.bashing == 0)):
+                self.msg(prompt="|X|[wHealth: X X X X O O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 4 ) and ( self.db.bashing == 1)):
+                self.msg(prompt="|X|[wHealth: X X X X / O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 4 ) and ( self.db.bashing == 2)):
+                self.msg(prompt="|X|[wHealth: X X X X / / O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 4 ) and ( self.db.bashing == 3)):
+                self.msg(prompt="|X|[wHealth: X X X X / / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 4 ) and ( self.db.bashing == 4)):
+                self.msg(prompt="|X|[wHealth: X X X X X / / ")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 4 ) and ( self.db.bashing == 5)):
+                self.msg(prompt="|X|[wHealth: X X X X X X / ")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 4 ) and ( self.db.bashing == 6)):
+                self.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.conscious = 0
+                self.db.alive = 0
+        
+
+        if((self.db.lethal == 5 ) and ( self.db.bashing == 0)):
+                self.msg(prompt="|X|[wHealth: X X X X X O O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 5 ) and ( self.db.bashing == 1)):
+                self.msg(prompt="|X|[wHealth: X X X X X / O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 5 ) and ( self.db.bashing == 2)):
+                self.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 5 ) and ( self.db.bashing == 3)):
+                self.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 5 ) and ( self.db.bashing == 4)):
+                self.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.conscious = 0
+                self.db.alive = 0                
+
+        if((self.db.lethal == 6 ) and ( self.db.bashing == 0)):
+                self.msg(prompt="|X|[wHealth: X X X X X X O")
+                self.db.conscious = 1
+                self.db.alive = 1
+        if((self.db.lethal == 6 ) and ( self.db.bashing == 1)):
+                self.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.conscious = 0
+                self.db.alive = 1
+        if((self.db.lethal == 6 ) and ( self.db.bashing == 2)):
+                self.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.conscious = 0
+                self.db.alive = 0
+                
+
+        if((self.db.lethal == 7 ) and ( self.db.bashing == 0)):
+                self.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.conscious = 0
+                self.db.alive = 0
+        
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 0)):
+                self.db.target.msg(prompt="|X|[wHealth: O O O O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 1)):
+                self.db.target.msg(prompt="|X|[wHealth: / O O O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 2)):
+                self.db.target.msg(prompt="|X|[wHealth: / / O O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1        
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 3)):
+                self.db.target.msg(prompt="|X|[wHealth: / / / O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 4)):
+                self.db.target.msg(prompt="|X|[wHealth: / / / / O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 5)):
+                self.db.target.msg(prompt="|X|[wHealth: / / / / / O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 6)):
+                self.db.target.msg(prompt="|X|[wHealth: / / / / / / O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 7)):
+                self.db.target.msg(prompt="|X|[wHealth: / / / / / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 8)):
+                self.db.target.msg(prompt="|X|[wHealth: X / / / / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 9)):
+                self.db.target.msg(prompt="|X|[wHealth: X X / / / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 10)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X / / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 11)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 12)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 13)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 0 ) and ( self.db.target.db.bashing == 14)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 0
+                
+                
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 0)):
+                self.db.target.msg(prompt="|X|[wHealth: X O O O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 1)):
+                self.db.target.msg(prompt="|X|[wHealth: X / O O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 2)):
+                self.db.target.msg(prompt="|X|[wHealth: X / / O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 3)):
+                self.db.target.msg(prompt="|X|[wHealth: X / / / O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 4)):
+                self.db.target.msg(prompt="|X|[wHealth: X / / / / O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 5)):
+                self.db.target.msg(prompt="|X|[wHealth: X / / / / / O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 6)):
+                self.db.target.msg(prompt="|X|[wHealth: X / / / / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 7)):
+                self.db.target.msg(prompt="|X|[wHealth: X X / / / / /  ")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 8)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X / / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 9)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X / / / ")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 10)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 11)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X / ")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 1 ) and ( self.db.target.db.bashing == 12)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 0
+                
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 0)):
+                self.db.target.msg(prompt="|X|[wHealth: X X O O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 1)):
+                self.db.target.msg(prompt="|X|[wHealth: X X / O O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 2)):
+                self.db.target.msg(prompt="|X|[wHealth: X X / / O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 3)):
+                self.db.target.msg(prompt="|X|[wHealth: X X / / / O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 4)):
+                self.db.target.msg(prompt="|X|[wHealth: X X / / / / O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 5)):
+                self.db.target.msg(prompt="|X|[wHealth: X X / / / / / O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 6)):
+                self.db.target.msg(prompt="|X|[wHealth: X X / / / / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 7)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X / / / /   ")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 8)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X / / / ")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 9)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 10)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 2 ) and ( self.db.target.db.bashing == 11)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 0
+        
+        
+        if((self.db.target.db.lethal == 3 ) and ( self.db.target.db.bashing == 0)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X O O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 3 ) and ( self.db.target.db.bashing == 1)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X / O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 3 ) and ( self.db.target.db.bashing == 2)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X / / O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 3 ) and ( self.db.target.db.bashing == 3)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X / / / O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 3 ) and ( self.db.target.db.bashing == 4)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X / / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 3 ) and ( self.db.target.db.bashing == 5)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 3 ) and ( self.db.target.db.bashing == 6)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 3 ) and ( self.db.target.db.bashing == 7)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 3 ) and ( self.db.target.db.bashing == 8)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 0
+
+
+        if((self.db.target.db.lethal == 4 ) and ( self.db.target.db.bashing == 0)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X O O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 4 ) and ( self.db.target.db.bashing == 1)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X / O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 4 ) and ( self.db.target.db.bashing == 2)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X / / O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 4 ) and ( self.db.target.db.bashing == 3)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X / / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 4 ) and ( self.db.target.db.bashing == 4)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X / / ")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 4 ) and ( self.db.target.db.bashing == 5)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X / ")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 4 ) and ( self.db.target.db.bashing == 6)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 0
+        
+
+        if((self.db.target.db.lethal == 5 ) and ( self.db.target.db.bashing == 0)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X O O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 5 ) and ( self.db.target.db.bashing == 1)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X / O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 5 ) and ( self.db.target.db.bashing == 2)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 5 ) and ( self.db.target.db.bashing == 3)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 5 ) and ( self.db.target.db.bashing == 4)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 0                
+
+        if((self.db.target.db.lethal == 6 ) and ( self.db.target.db.bashing == 0)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X O")
+                self.db.target.db.conscious = 1
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 6 ) and ( self.db.target.db.bashing == 1)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 1
+        if((self.db.target.db.lethal == 6 ) and ( self.db.target.db.bashing == 2)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 0
+                
+
+        if((self.db.target.db.lethal == 7 ) and ( self.db.target.db.bashing == 0)):
+                self.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+                self.db.target.db.conscious = 0
+                self.db.target.db.alive = 0        
+
 
     def return_appearance(self, looker):
         looker.msg(image=[self.db.image, self.db.desc])
