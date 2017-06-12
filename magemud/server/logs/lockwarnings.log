@@ -1855,3 +1855,6 @@ LockHandler on Fighter1: access type 'call' changed from 'call:true()' to 'call:
 2017-06-06 04:01:24-0000 [-] LockHandler on Fighter2: access type 'get' changed from 'get:all()' to 'get:false()' 
 LockHandler on Fighter2: access type 'call' changed from 'call:true()' to 'call:false()'
 2017-06-06 04:01:24-0000 [-] LockHandler on Fighter2: access type 'puppet' changed from 'puppet:pperm(Immortals)' to 'puppet:id(399) or pid(34) or perm(Immortals) or pperm(Immortals)'
+2017-06-12 20:38:55-0000 [-] LockHandler on Ambros Severin: access type 'get' changed from 'get:all()' to 'get:false()' 
+LockHandler on Ambros Severin: access type 'call' changed from 'call:true()' to 'call:false()'
+2017-06-12 20:38:55-0000 [-] LockHandler on Ambros Severin: access type 'puppet' changed from 'puppet:pperm(Immortals)' to 'puppet:id(400) or pid(35) or perm(Immortals) or pperm(Immortals)'

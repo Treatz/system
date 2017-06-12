@@ -39,6 +39,7 @@ from commands.command import OverGive
 from commands.command import OverDrop
 from commands.command import OverPose
 from commands.command import OverWhisper
+from commands.spellz import CmdSpell
 
 class CharacterCmdSet(default_cmds.CharacterCmdSet):
     """
@@ -145,3 +146,4 @@ class SessionCmdSet(default_cmds.SessionCmdSet):
 	self.add(OverGive())
 	self.add(OverPose())
 	self.add(OverWhisper())
+	self.add(CmdSpell())
