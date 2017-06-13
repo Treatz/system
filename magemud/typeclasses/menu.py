@@ -11,25 +11,594 @@ def exit_combat(caller):
     caller.execute_cmd('Exit')
 
 def attack_node(caller):
-	healthbar = "|X|[wHealth:"
-	total = caller.db.lethal + caller.db.bashing
-	if total >= 8:
-		difference = total - 8
-		caller.db.lethal = caller.db.lethal + difference
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: O O O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: / O O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: / / O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: / / / O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: / / / / O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: / / / / / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 6)):
+		caller.msg(prompt="|X|[wHealth: / / / / / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 7)):
+		caller.msg(prompt="|X|[wHealth: / / / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 8)):
+		caller.msg(prompt="|X|[wHealth: X / / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 9)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 10)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 11)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 12)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 13)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.conscious = 0
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing >= 14)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 0
+		caller.db.alive = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X O O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X / O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X / / O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X / / / O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: X / / / / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: X / / / / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 6)):
+		caller.msg(prompt="|X|[wHealth: X / / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 7)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / /  ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 8)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 9)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / / ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 10)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 11)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X / ")
+		caller.db.conscious = 0
+		caller.db.alive = 1
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing >= 12)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X / O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X X / / O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X X / / / O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 6)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 7)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / /   ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 8)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / / ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 9)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 10)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.conscious = 0
+		
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing >= 11)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+	
+	
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X X O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X X / O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X X X / / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 6)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 7)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.conscious = 0
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing >= 8)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+
+
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X X X O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X X X / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / / ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X / ")
 		caller.db.conscious = 0
 
-	if caller.db.lethal > 8:
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing >= 6)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
 		caller.db.alive = 0
-        
-	for i in range(0,8):
-		if i < caller.db.lethal - 1:
-			healthbar += " X"
-		elif i < total:
-			healthbar += " /"
-		else:
-			healthbar += " 0"
-        
-	caller.msg(prompt=healthbar)
+	
+
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X X X X O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.conscious = 0
+
+		
+
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing >= 4)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0		
+
+	if((caller.db.lethal == 6 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X O")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 6 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.conscious = 0
+
+		
+
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 6 ) and ( caller.db.bashing >= 2)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 0
+		caller.db.alive = 0
+		
+
+	if((caller.db.lethal >= 7 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+	
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: O O O O O O O")
+		caller.db.target.db.conscious = 1
+		
+
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: / O O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / O O O O O")
+		caller.db.target.db.conscious = 1
+			
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / / O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / / / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / / / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 7)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 8)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 9)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 10)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 11)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 12)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 13)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing >= 14)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+		
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X O O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 7)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / /  ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 8)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 9)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / / ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 10)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 11)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X / ")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing >= 12)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 7)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / /   ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 8)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / / ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 9)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 10)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing >= 11)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+	
+	
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 7)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing >= 8)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+
+
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / / ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X / ")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing >= 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+	
+
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing >= 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0		
+
+	if((caller.db.target.db.lethal == 6 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 6 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 6 ) and ( caller.db.target.db.bashing >= 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+		
+
+	if((caller.db.target.db.lethal >= 7 ) and ( caller.db.target.db.bashing >= 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0	
+
 
 	caller.db.start_time = timer()
 
@@ -448,69 +1017,633 @@ def skip_attack(caller):
     return text, options
 
 def skip_defend(caller):
+    caller.db.start_time = 99999999999999999999999
+    caller.msg("|/|rYou have been hit by %s.|/" % caller.db.target)
+    if(caller.db.conscious == 0):
+        caller.db.target.msg("|/|r%s is unconscious.|/" % caller)
+    if(caller.db.conscious == 1):
+        caller.db.target.msg("|/|r%s has skipped his turn.|/" % caller)
 
-	test = caller.db.dexterity + caller.db.athletics
-	soak = caller.db.stamina
-	counter = 0
-	defendpoints = 0
-	while (counter < test):
-		counter = counter + 1
-		roll = roll_dice(1, 10)
-		if (roll >= 6):
-			defendpoints = defendpoints + 1
+    if(caller.db.conscious == 0 and caller.db.alive == 1):
+        text = "|/|rYou are unconscious!"
+    if(caller.db.conscious == 1 or caller.db.alive == 0):
+        text = "|/|r You have skipped your turn!"
+    EvMenu(caller.db.target, "typeclasses.menu", startnode="attack_node",auto_quit=False, cmd_on_exit=None)
 
-	dmg = damage
-	caller.db.start_time = 99999999999999999999999
-	if (defendpoints > 0):
-		tst = damage2
-		dmg2 = damage
-		cnt2 = 0
-		while (cnt2 < tst):
-			cnt2 = cnt2 + 1
-			roll = roll_dice(1, 10)
-			if (roll >= 6):
-				dmg = dmg + 1
-
-		if(caller.db.target.db.weapon == 0):
-			caller.msg("|/|g%s causes %i points of damage to you." % (caller.db.target, dmg2))
-			caller.db.bashing = caller.db.bashing + dmg2
-			caller.db.target.msg("|/|gYou deal %i points of damage with your punch." % (dmg2))
-
-		if(caller.db.target.db.weapon == 1):
-			caller.msg("|/|g%s causes %i points of lethal damage to you." % (caller.db.target, dmg2))
-			caller.db.lethal = caller.db.lethal + dmg2
-			caller.db.target.msg("|/|gYou deal %i points of lethal damage." % (dmg2))
-			
-
-	EvMenu(caller, "typeclasses.menu", startnode="attack_node", auto_quit=False, cmd_on_exit=None)
+    if(caller.db.alive == 0):
+        caller.db.conscious = 1
+        caller.msg("|rYou are dead!")
+        caller.db.target.msg("|/|r%s is dead!"% caller)
+        caller.ndb._menutree.close_menu()
+        caller.db.target.ndb._menutree.close_menu()
+	corpse2 = create_object(key="Corpse", location = caller.location)
+	corpse2.db.description = "A bloody mess of flesh and broken bones."
+       	print(caller.location)
 	text = ""
-	options = {"key": "_default",
-		"goto": "wait"}
+        options = ()
 
-	return text, options
-	
+
+    options = {"key": "_default",
+               "goto": "wait"}
+    return text, options
+
 def defend_node(caller):
-
-	healthbar = "|X|[wHealth:"
-	total = caller.db.lethal + caller.db.bashing
-	if total >= 8:
-		difference = total - 8
-		caller.db.lethal = caller.db.lethal + difference
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: O O O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: / O O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: / / O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: / / / O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: / / / / O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: / / / / / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 6)):
+		caller.msg(prompt="|X|[wHealth: / / / / / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 7)):
+		caller.msg(prompt="|X|[wHealth: / / / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 8)):
+		caller.msg(prompt="|X|[wHealth: X / / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 9)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 10)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 11)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 12)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing == 13)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
 		caller.db.conscious = 0
 
-	if caller.db.lethal > 8:
-		caller.db.alive = 0
-        
-	for i in range(0,8):
-		if i < caller.db.lethal - 1:
-			healthbar += " X"
-		elif i < total:
-			healthbar += " /"
-		else:
-			healthbar += " 0"
-        
-	caller.msg(prompt=healthbar)
+		
 
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 0 ) and ( caller.db.bashing >= 14)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X O O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X / O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X / / O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X / / / O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: X / / / / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: X / / / / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 6)):
+		caller.msg(prompt="|X|[wHealth: X / / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 7)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / /  ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 8)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 9)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / / ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 10)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing == 11)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X / ")
+		caller.db.conscious = 0
+
+		
+
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 1 ) and ( caller.db.bashing >= 12)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X / O O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X X / / O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X X / / / O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 6)):
+		caller.msg(prompt="|X|[wHealth: X X / / / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 7)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / /   ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 8)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / / ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 9)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing == 10)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.conscious = 0
+
+		
+
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 2 ) and ( caller.db.bashing >= 11)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+	
+	
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X X O O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X X / O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X X X / / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 6)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing == 7)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.conscious = 0
+
+		
+
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 3 ) and ( caller.db.bashing >= 8)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+
+
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X X X O O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X X X / O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 4)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / / ")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing == 5)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X / ")
+		caller.db.conscious = 0
+
+		
+
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 4 ) and ( caller.db.bashing >= 6)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+	
+
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X X X X O O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing == 2)):
+		caller.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.conscious = 0
+		
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing == 3)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.conscious = 0
+
+		
+
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 5 ) and ( caller.db.bashing >= 4)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0		
+
+	if((caller.db.lethal == 6 ) and ( caller.db.bashing == 0)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X O")
+		caller.db.conscious = 1
+		
+	if((caller.db.lethal == 6 ) and ( caller.db.bashing == 1)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.conscious = 0
+
+		
+
+		caller.db.alive = 1
+
+	if((caller.db.lethal == 6 ) and ( caller.db.bashing >= 2)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+		
+
+	if((caller.db.lethal >= 7 ) and ( caller.db.bashing >= 0)):
+		caller.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.conscious = 1
+		caller.db.alive = 0
+	
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: O O O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: / O O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / / O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / / / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / / / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 7)):
+		caller.db.target.msg(prompt="|X|[wHealth: / / / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 8)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 9)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 10)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 11)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 12)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing == 13)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 0 ) and ( caller.db.target.db.bashing >= 14)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+		
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X O O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: X / / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 7)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / /  ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 8)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 9)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / / ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 10)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 11)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X / ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 1 ) and ( caller.db.target.db.bashing == 12)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / O O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X / / / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 7)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / /   ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 8)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / / ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 9)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing == 10)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 2 ) and ( caller.db.target.db.bashing >= 11)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+	
+	
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X O O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X / / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing == 7)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 3 ) and ( caller.db.target.db.bashing >= 8)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+
+
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X O O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X / / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / / ")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing == 5)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X / ")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 4 ) and ( caller.db.target.db.bashing >= 6)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+	
+
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X O O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing == 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X / /")
+		caller.db.target.db.conscious = 0
+		
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing == 3)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 5 ) and ( caller.db.target.db.bashing >= 4)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0		
+
+	if((caller.db.target.db.lethal == 6 ) and ( caller.db.target.db.bashing == 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X O")
+		caller.db.target.db.conscious = 1
+		
+	if((caller.db.target.db.lethal == 6 ) and ( caller.db.target.db.bashing == 1)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X /")
+		caller.db.target.db.conscious = 0
+
+		
+
+		caller.db.target.db.alive = 1
+
+	if((caller.db.target.db.lethal == 6 ) and ( caller.db.target.db.bashing >= 2)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0
+		
+
+	if((caller.db.target.db.lethal >= 7 ) and ( caller.db.target.db.bashing >= 0)):
+		caller.db.target.msg(prompt="|X|[wHealth: X X X X X X X")
+		caller.db.target.db.conscious = 1
+		caller.db.target.db.alive = 0	
 
 
 	caller.db.target.start_time = timer()
