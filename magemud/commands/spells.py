@@ -30,30 +30,71 @@ def node_get_2(caller, raw_string):
     return text, options
  
 def node_get_3(caller, raw_string):
+    # each node is passed the text entered
+    # via raw_string. technically we should use
+    # raw_string.strip()
+    # _menutree is set by EvMenu on the caller.
+    # use it to store info you need through the menu
+    # it deletes itself after
     caller.ndb._menutree.desc2 = raw_string
     text = "Please enter third description:\n"
     options = ({'key': '_default',
+        'goto': 'node_get_4'},)
+    return text, options
+
+def node_get_4(caller, raw_string):
+    # each node is passed the text entered
+    # via raw_string. technically we should use
+    # raw_string.strip()
+    # _menutree is set by EvMenu on the caller.
+    # use it to store info you need through the menu
+    # it deletes itself after
+    caller.ndb._menutree.desc3 = raw_string
+    text = "Please enter attribute to change:\n"
+    options = ({'key': '_default',
+        'goto': 'node_get_5'},)
+    return text, options
+
+def node_get_5(caller, raw_string):
+    caller.ndb._menutree.desc4 = raw_string
+    text = "Please enter new value:\n"
+    options = ({'key': '_default',
         'goto': 'node_final'},)
     return text, options
- 
+
+
 def node_final(caller, raw_string):
     # final node, lots going on here
  
     # first we pull our descriptions out of the _menutree
     desc1 = caller.ndb._menutree.desc1
     desc2 = caller.ndb._menutree.desc2
+    desc3 = caller.ndb._menutree.desc3
     # we're passed a final string from the last node
-    desc3 = raw_string
+    attr1 = caller.ndb._menutree.desc4
+    val1 = raw_string
  
     # in our initialization of EvMenu, we added these arguments.
     # EvMenu stores this info in _menutree automagically.
     player_a = caller.ndb._menutree.player_a
     player_b = caller.ndb._menutree.player_b
- 
+
+    player_b.attributes.add(attr1, int(val1))
     # past here, do as you will with the data. this is an example
     player_a.msg(desc1)
     player_b.msg(desc2)
- 
+    healthbar = "|X|[wHealth:"
+    total = player_b.db.lethal + player_b.db.bashing
+    for i in range(0,8):
+        if i < player_b.db.lethal - 1:
+            healthbar += " X"
+        elif i < total:
+            healthbar += " /"
+        else:
+            healthbar += " 0"
+        
+        player_b.msg(prompt=healthbar)
+
     # so here, we could just use caller.location.msg, or you could uncomment the confusing generator.
     # up to you
     """

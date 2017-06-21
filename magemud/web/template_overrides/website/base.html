@@ -63,9 +63,10 @@
         <!--span class="doNotDisplay">Navigation:</span-->
         <a href="/">Home</a> |
         <a href="http://mud.streetwitch.com/chargen/">Chargen</a> |
-        <a href="{% url 'admin:index' %}">Admin Interface</a>
+        <a href="{% url 'admin:index' %}">Admin Interface</a> |
+       <a href="http://mud.streetwitch.com/ff/">Fan Fiction</a> |
         {% if webclient_enabled %}
-         | <a href="{% url 'webclient:index' %}">Play Online</a>
+        <a href="{% url 'webclient:index' %}">Play Online</a>
         {% endif %}
 
       </div>

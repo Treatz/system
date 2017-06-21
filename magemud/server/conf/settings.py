@@ -40,7 +40,8 @@ MULTISESSION_MODE=0
 # Django web features
 ######################################################################
 INSTALLED_APPS += ('web.chargen',
-		'web.character',)
+		'web.character',
+                'web.ff',)
 DEBUG = True
 # The secret key is randomly seeded upon creation. It is used to sign
 # Django's cookies. Do not share this with anyone. Changing it will
