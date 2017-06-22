@@ -1923,3 +1923,6 @@ LockHandler on testchar2: access type 'call' changed from 'call:true()' to 'call
 2017-06-22 21:10:51-0000 [-] LockHandler on testchar3: access type 'get' changed from 'get:all()' to 'get:false()' 
 LockHandler on testchar3: access type 'call' changed from 'call:true()' to 'call:false()'
 2017-06-22 21:10:52-0000 [-] LockHandler on testchar3: access type 'puppet' changed from 'puppet:pperm(Immortals)' to 'puppet:id(432) or pid(56) or perm(Immortals) or pperm(Immortals)'
+2017-06-22 22:53:20-0000 [-] LockHandler on Concept: access type 'get' changed from 'get:all()' to 'get:false()' 
+LockHandler on Concept: access type 'call' changed from 'call:true()' to 'call:false()'
+2017-06-22 22:53:21-0000 [-] LockHandler on Concept: access type 'puppet' changed from 'puppet:pperm(Immortals)' to 'puppet:id(433) or pid(57) or perm(Immortals) or pperm(Immortals)'
