@@ -74,16 +74,12 @@ def creating(request):
         newchar.db.awareness = trans(myform['testA2'])-1
         newchar.db.brawl = trans(myform['testA3'])-1
         newchar.db.intimidation = trans(myform['testA4'])-1
-        newchar.db.streetwise = trans(myform['testA5'])-1
-        newchar.db.drive = trans(myform['testB'])-1
         newchar.db.firearms = trans(myform['testB1'])-1
         newchar.db.martialarts = trans(myform['testB2'])-1
         newchar.db.melee = trans(myform['testB3'])-1
         newchar.db.meditation = trans(myform['testB4'])-1
         newchar.db.stealth = trans(myform['testB5'])-1
-        newchar.db.astrology = trans(myform['testC'])-1
         newchar.db.computer = trans(myform['testC1'])-1
-        newchar.db.language = trans(myform['testC2'])-1
         newchar.db.medicine = trans(myform['testC3'])-1
         newchar.db.occult = trans(myform['testC4'])-1
         newchar.db.rituals = trans(myform['testC5'])-1
@@ -93,7 +89,6 @@ def creating(request):
         newchar.db.stealth = trans(myform['testB5'])-1
         newchar.db.astrology = trans(myform['testC'])-1
         newchar.db.computer = trans(myform['testC1'])-1
-        newchar.db.language = trans(myform['testC2'])-1
         newchar.db.medicine = trans(myform['testC3'])-1
         newchar.db.occult = trans(myform['testC4'])-1
         newchar.db.rituals = trans(myform['testC5'])-1
