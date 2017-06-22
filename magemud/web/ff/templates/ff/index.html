@@ -26,14 +26,20 @@ ul#list > li {
     line-height: 20px;
 }
 </style>
+This is a tool to create your own Mage fan fiction.  It runs on a database of over 30,000 phrases,<br>
+and allows you to input them into your own stories, defeating writers block.  (It will take a minuet to load)<br><br>
+<br><br>
+Generated Phrases:<br>
 
 <ul id="list">
-This is a tool to create your own Mage fan fiction.  It runs on a database of over 30,000 phrases, and allows you to input them into your own stories, defeating writers block!<br><br>
-<li id="element1">Generated Phrases:</li>
 
 </ul>
 
-<div class="btn" onClick="addAnother()">Load</div>
+<div>
+    <div class = "btn" onClick="addAnother()" style="display: inline-block;">Load</div>
+    <div class = "btn" onClick="Clear()" style="display: inline-block;">Clear</div>   
+</div>
+
   <script>
 var db = ['a',
 'a better',
@@ -31376,6 +31382,11 @@ addAnother = function() {
     li.setAttribute("id", "element"+children)
     li.appendChild(document.createTextNode(output));
     ul.appendChild(li)
+}
+
+Clear = function() {
+var myList = document.getElementById('list');
+myList.innerHTML = '';
 }
   </script>
 {% endblock %}
