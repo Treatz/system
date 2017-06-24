@@ -88,59 +88,59 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 0 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: O O O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: / O O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: / / O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: / / / O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: / / / / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: / / / / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: / / / / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: / / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 9)):
                 self.msg(prompt="|X|[wHealth: X X / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 10)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 11)):
                 self.msg(prompt="|X|[wHealth: X X X X / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 12)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 13)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 14)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -149,51 +149,51 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 1 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X O O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X / O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X / / O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X / / / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X / / / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X / / / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: X X / / / / /  ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 9)):
                 self.msg(prompt="|X|[wHealth: X X X X / / / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 10)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 11)):
                 self.msg(prompt="|X|[wHealth: X X X X X X / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 12)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -202,47 +202,47 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 2 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X / O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X / / O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X / / / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X / / / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X X / / / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X X / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /   ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X X X X / / / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 9)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 10)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 11)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -252,35 +252,35 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 3 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X X / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X X X X / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -290,27 +290,27 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 4 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X X O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X X / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X X / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X X X / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X X X X / / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X X X X X X / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -320,19 +320,19 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 5 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X X X O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X X X / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -341,11 +341,11 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 6 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X X X X O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 6 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 6 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -640,59 +640,59 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 0 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: O O O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: / O O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: / / O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: / / / O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: / / / / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: / / / / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: / / / / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: / / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 9)):
                 self.msg(prompt="|X|[wHealth: X X / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 10)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 11)):
                 self.msg(prompt="|X|[wHealth: X X X X / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 12)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 13)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 14)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -701,51 +701,51 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 1 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X O O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X / O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X / / O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X / / / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X / / / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X / / / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: X X / / / / /  ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 9)):
                 self.msg(prompt="|X|[wHealth: X X X X / / / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 10)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 11)):
                 self.msg(prompt="|X|[wHealth: X X X X X X / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 12)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -754,47 +754,47 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 2 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X / O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X / / O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X / / / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X / / / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X X / / / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X X / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /   ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X X X X / / / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 9)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 10)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 11)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -804,35 +804,35 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 3 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X X / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X X X X / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -842,27 +842,27 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 4 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X X O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X X / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X X / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X X X / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X X X X / / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X X X X X X / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -872,19 +872,19 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 5 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X X X O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X X X / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -893,11 +893,11 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 6 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X X X X O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 6 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 6 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -1200,59 +1200,59 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 0 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: O O O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: / O O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: / / O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: / / / O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: / / / / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: / / / / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: / / / / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: / / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 9)):
                 self.msg(prompt="|X|[wHealth: X X / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 10)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 11)):
                 self.msg(prompt="|X|[wHealth: X X X X / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 12)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 13)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 0 ) and ( self.db.bashing == 14)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -1261,51 +1261,51 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 1 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X O O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X / O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X / / O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X / / / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X / / / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X / / / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: X X / / / / /  ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 9)):
                 self.msg(prompt="|X|[wHealth: X X X X / / / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 10)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 11)):
                 self.msg(prompt="|X|[wHealth: X X X X X X / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 1 ) and ( self.db.bashing == 12)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -1314,47 +1314,47 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 2 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X / O O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X / / O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X / / / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X / / / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X X / / / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X X / / / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /   ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X X X X / / / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 9)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 10)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 2 ) and ( self.db.bashing == 11)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -1364,35 +1364,35 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 3 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X O O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X / O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X / / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X X / / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X X / / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X X X X / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 7)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 3 ) and ( self.db.bashing == 8)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -1402,27 +1402,27 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 4 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X X O O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X X / O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X X / / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X X X / / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X X X X / / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 5)):
                 self.msg(prompt="|X|[wHealth: X X X X X X / ")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 4 ) and ( self.db.bashing == 6)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -1432,19 +1432,19 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 5 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X X X O O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X X X / O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X X X / /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 3)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 5 ) and ( self.db.bashing == 4)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0
@@ -1453,11 +1453,11 @@ class Character(DefaultCharacter):
         if((self.db.lethal == 6 ) and ( self.db.bashing == 0)):
                 self.msg(prompt="|X|[wHealth: X X X X X X O")
                 self.db.conscious = 1
-                self.db.alive = 1
+                
         if((self.db.lethal == 6 ) and ( self.db.bashing == 1)):
                 self.msg(prompt="|X|[wHealth: X X X X X X /")
                 self.db.conscious = 0
-                self.db.alive = 1
+                
         if((self.db.lethal == 6 ) and ( self.db.bashing == 2)):
                 self.msg(prompt="|X|[wHealth: X X X X X X X")
                 self.db.conscious = 0

@@ -210,7 +210,7 @@ class FooBar(Command):
 class OverLook(default_cmds.CmdLook):
     key = "look"
     def func(self):
-        if(self.caller.db.alive == 1 and self.caller.db.conscious == 1):
+        if(self.caller.db.conscious == 1):
             super(OverLook, self).func()
         else:
             self.caller.msg("You can't see.")

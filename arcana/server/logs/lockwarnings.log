@@ -1932,3 +1932,6 @@ LockHandler on Player21: access type 'call' changed from 'call:true()' to 'call:
 2017-06-23 20:09:04-0000 [-] LockHandler on playercharacter: access type 'get' changed from 'get:all()' to 'get:false()' 
 LockHandler on playercharacter: access type 'call' changed from 'call:true()' to 'call:false()'
 2017-06-23 20:09:05-0000 [-] LockHandler on playercharacter: access type 'puppet' changed from 'puppet:pperm(Immortals)' to 'puppet:id(435) or pid(59) or perm(Immortals) or pperm(Immortals)'
+2017-06-24 22:43:41-0000 [-] LockHandler on Wimp: access type 'get' changed from 'get:all()' to 'get:false()' 
+LockHandler on Wimp: access type 'call' changed from 'call:true()' to 'call:false()'
+2017-06-24 22:43:42-0000 [-] LockHandler on Wimp: access type 'puppet' changed from 'puppet:pperm(Immortals)' to 'puppet:id(436) or pid(60) or perm(Immortals) or pperm(Immortals)'
