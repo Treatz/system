@@ -675,6 +675,16 @@ def select_weapon(caller, input):
 		"goto": "skip_attack"})
 	return text, options
 
+def remove_weapon(caller, input):
+        caller.db.start_time = 99999999999999999999999
+        caller.db.target.msg("|/|g%s puts his %s away." % (caller.name, caller.db.selected_weapon))
+        text = ("|/|gYou put your %s away" % caller.db.selected_weapon)
+        caller.db.selected_weapon = "None"
+        EvMenu(caller.db.target, "typeclasses.menu", startnode="attack_node",auto_quit=False, cmd_on_exit=None)
+
+        options = ({"key": "_default", 
+                "goto": "skip_attack"})
+        return text, options
 
 def wield(caller):
 	caller.db.start_time = timer() - 7
@@ -684,7 +694,10 @@ def wield(caller):
 		options += ({"key": "|y" + each.name,
 			"desc": "appearances",
 			"goto": "select_weapon"},)
-	options += ({"key": "_default",
+	options += ({"key": "|y remove",
+                "desc": "remove weapons",
+                "goto": "remove_weapon"},
+                {"key": "_default",
 		"goto": "skip_attack"},)
 
 	return text, options
@@ -1664,10 +1677,7 @@ def defend_node(caller):
 		{"key": "|yflee",
 		"desc": "Run away.",
 		"goto": "wait",
-		"exec": "flee"},
-		{"key": "|yskip",
-		"desc": "Do nothing.",
-		"goto": "skip_defend"})
+		"exec": "flee"},)
 
 	if(caller.db.alive == 0):
 		caller.db.conscious = 1
